@@ -6,7 +6,7 @@ export default function LandCard() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/magic-kingdom-data")
+      .get("https://oyster-app-sus4c.ondigitalocean.app/magic-kingdom-data")
       .then((res) => {
         console.log(res);
         setLandInfo(res.data.lands);

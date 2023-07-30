@@ -8,11 +8,11 @@ function Post(props) {
   console.log(props);
   const [post, setPost] = useState([]);
   const [markdown, setMarkdown] = useState("");
-  const imageUrl = "http://localhost:5000/uploads/" + post.fileName;
+  const imageUrl = "https://oyster-app-sus4c.ondigitalocean.app/uploads/" + post.fileName;
   const dataAdSlot = "4104724639";
 
   useEffect(() => {
-    const postApiEndPoint = "http://localhost:5000/post/" + props.id;
+    const postApiEndPoint = "https://oyster-app-sus4c.ondigitalocean.app/post/" + props.id;
     console.log(postApiEndPoint);
     axios
       .get(postApiEndPoint)
@@ -20,7 +20,7 @@ function Post(props) {
         console.log(res);
         setPost(res.data.post);
         const imageUrl =
-          "http://localhost:5000/uploads/" + res.data.post.fileName;
+          "https://oyster-app-sus4c.ondigitalocean.app/uploads/" + res.data.post.fileName;
         const markdown = res.data.post.body.replace(
           "https://example.com/haunted-mansion-image.jpg",
           imageUrl

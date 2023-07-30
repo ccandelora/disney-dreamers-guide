@@ -6,7 +6,7 @@ function Posts() {
   
   useEffect(() => {
     axios
-      .get("http://localhost:5000/posts")
+      .get("https://oyster-app-sus4c.ondigitalocean.app/posts")
       .then((res) => {
         console.log(res);
         setPosts(res.data.posts);
@@ -34,7 +34,7 @@ function Posts() {
       {posts.map((post) => {
         console.log(post);
         const imageUrl = post.image
-          ? "http://localhost:5000/uploads/" + post.fileName
+          ? "https://oyster-app-sus4c.ondigitalocean.app/uploads/" + post.fileName
           : "none";
         const postStyle = {
           backgroundImage: `url("${imageUrl}")`,
