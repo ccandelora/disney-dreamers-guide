@@ -137,7 +137,7 @@ body {
   }
 
   .magic-kingdom {
-    background-image: url("http://localhost:3000/magic-kingdom.jpg");
+    background-image: url("/magic-kingdom.jpg");
     background-size: cover;
   }
 
