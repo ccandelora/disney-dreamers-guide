@@ -33,9 +33,9 @@ function App() {
   return (
     <div>   
       <Header />
-      <div className="container m-5">
+      <main className="container">
         <RouterProvider router={router} />
-      </div>  
+      </main>  
     </div> 
   );
 }

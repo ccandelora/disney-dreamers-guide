@@ -8,11 +8,13 @@ function Post(props) {
   console.log(props);
   const [post, setPost] = useState([]);
   const [markdown, setMarkdown] = useState("");
-  const imageUrl = "https://oyster-app-sus4c.ondigitalocean.app/uploads/" + post.fileName;
+  const imageUrl =
+    "https://oyster-app-sus4c.ondigitalocean.app/uploads/" + post.fileName;
   const dataAdSlot = "4104724639";
 
   useEffect(() => {
-    const postApiEndPoint = "https://oyster-app-sus4c.ondigitalocean.app/post/" + props.id;
+    const postApiEndPoint =
+      "https://oyster-app-sus4c.ondigitalocean.app/post/" + props.id;
     console.log(postApiEndPoint);
     axios
       .get(postApiEndPoint)
@@ -20,7 +22,8 @@ function Post(props) {
         console.log(res);
         setPost(res.data.post);
         const imageUrl =
-          "https://oyster-app-sus4c.ondigitalocean.app/uploads/" + res.data.post.fileName;
+          "https://oyster-app-sus4c.ondigitalocean.app/uploads/" +
+          res.data.post.fileName;
         const markdown = res.data.post.body.replace(
           "https://example.com/haunted-mansion-image.jpg",
           imageUrl
@@ -33,23 +36,23 @@ function Post(props) {
   }, []);
 
   return (
-    <div className="container col-xxl-8 px-4 py-5">
-      <div className="row flex-lg-row align-items-center g-5 py-5">
-        <div className="col-lg-6">
-          <h1 className="mouse-text">{post.title}</h1>
-          <img
-            src={imageUrl}
-            className="img-fluid markdown-image"
-            alt={post.altImageName}
-          />
-          <ReactMarkdown children={markdown} />
-        </div>
-        <div className="col-lg-3">
-          <h1>Ad should be here</h1>
-          <AdsComponent dataAdSlot={dataAdSlot} />
-        </div>
+    <div className="row">
+    <div className="col-xl-7">
+      <article className="blog-post">
+        <h1 className="mouse-text">{post.title}</h1>
+        <img
+          src={imageUrl}
+          className="img-fluid markdown-image"
+          alt={post.altImageName}
+        />
+        <ReactMarkdown children={markdown} />
+      </article>
       </div>
-    </div>
+      <div className="col-xl-4">
+        <h1>Ad should be here</h1>
+        <AdsComponent dataAdSlot={dataAdSlot} />
+      </div>
+      </div>
   );
 }
 

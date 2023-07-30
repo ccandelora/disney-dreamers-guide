@@ -14,7 +14,7 @@ export default function PostWraper() {
             setActiveNav();
         }, []);
   return (
-    <div>
+    <div className="row">
       <Posts  />
     </div>
   );
