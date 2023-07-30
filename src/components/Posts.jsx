@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import AdsComponent from "./AdsComponent";
 
 function Posts() {
   const [posts, setPosts] = useState([]);
+  const dataAdSlot = "3261318770";
   
   useEffect(() => {
     axios
@@ -30,6 +32,9 @@ function Posts() {
     }
   };
   return (
+    <div className="container col-xxl-8 px-4 py-5">
+    <h1>Ad should be here</h1>
+    <AdsComponent dataAdSlot={dataAdSlot} />
     <div className="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
       {posts.map((post) => {
         console.log(post);
@@ -72,6 +77,7 @@ function Posts() {
         );
       })}
       ;
+    </div>
     </div>
   );
 }
