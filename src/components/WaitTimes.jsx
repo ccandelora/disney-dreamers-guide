@@ -1,8 +1,8 @@
 import React, {useEffect} from 'react'
 import Feature from './Feature';
-import LandCard from './LandCard';
+import ParkCard from './ParkCard';
 
-function WaitTimes() {
+function WaitTimes(props) {
     const setActiveNav = function () {
         const navLinks = document.querySelectorAll(".nav-link");
         navLinks.forEach((link) => {
@@ -16,8 +16,8 @@ function WaitTimes() {
         }, []);
   return (
     <div>
-        <Feature />
-        <LandCard />
+        <Feature title={props.title} park={props.park}/>
+        <ParkCard park={props.park}/>
     </div>
     
   )

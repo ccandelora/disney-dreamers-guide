@@ -1,21 +1,74 @@
-import React from 'react'
+import React from "react";
 
 export default function Header() {
   return (
     <div className="container">
-    <header className="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-      <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-        <svg className="bi me-2" width="40" height="32"><use xLinkHref="#bootstrap"></use></svg>
-        <span className="fs-4 mouse-text text-white">Disney Dreamer's Guide</span>
-      </a>
+      <header className="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <a
+          href="/"
+          className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none"
+        >
+          <svg className="bi me-2" width="40" height="32">
+            <use xLinkHref="#bootstrap"></use>
+          </svg>
+          <span className="fs-4 mouse-text text-white">
+            <img
+              src="/disney-dreamer.png"
+              alt="Disney Dreamer's Guide"
+              height="75"
+            />
+          </span>
+        </a>
 
-      <ul className="nav nav-pills">
-        <li className="nav-item"><a href="/" className="nav-link active text-white home" aria-current="page">Home</a></li>
-        <li className="nav-item"><a href="/magic-kingdom-queue-times" className="nav-link text-white wait-times">Wait Times</a></li>
-        <li className="nav-item"><a href="/" className="nav-link text-white articles">Articles</a></li>
-        
-      </ul>
-    </header>
-  </div>
-  )
+        <ul className="nav nav-pills">
+        <li className="nav-item home">
+            <a href="/" className="nav-link text-white articles">
+              Home
+            </a>
+          </li>
+          <li className="nav-item wait-times">
+            <div className="dropdown">
+              <button
+                className="btn btn-secondary dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Current Wait Times
+              </button>
+              <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li>
+                  <a className="dropdown-item" href="/magic-kingdom-queue-times">
+                    Magic Kingdom Wait TImes
+                  </a>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="epcot-queue-times">
+                    Epcot
+                  </a>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="hollywood-studios-queue-times">
+                    Hollywood Studios
+                  </a>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="animal-kingdom-queue-times">
+                    Animal Kingdom
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li className="nav-item">
+            <a href="/" className="nav-link text-white articles">
+              Articles
+            </a>
+          </li>
+        </ul>
+      </header>
+    </div>
+  );
 }

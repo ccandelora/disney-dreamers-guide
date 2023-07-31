@@ -12,6 +12,7 @@ import HomeWraper from './components/HomeWraper';
 import Post from './components/Post';
 import Header from './components/Header';
 import Test from './components/Test';
+import Footer from './components/Footer';
 
 function App() {
   //const { id } = useParams();
@@ -19,23 +20,33 @@ function App() {
     { path: "/",
       element: <HomeWraper /> 
     },
-    { path: "/magic-kingdom-queue-times",
-      element: <WaitTimes />
-    },
-    { path: "/post/:id",
+    { path: "/post/:slug",
       element: <PostWraper />
     },
     {path: "/articles",
       element: <PostsWraper />
     },
+    { path: "/magic-kingdom-queue-times",
+      element: <WaitTimes title="Magic Kingdom Wait Times" park="magic-kingdom" />
+    },
+    { path: "/epcot-queue-times",
+      element: <WaitTimes title="Epcot Wait Times" park="epcot"/>
+    },
+    { path: "/hollywood-studios-queue-times",
+      element: <WaitTimes title="Hollywood Studios Wait Times"park="hollywood-studios"/>
+    },
+    { path: "/animal-kingdom-queue-times",
+      element: <WaitTimes title="Aniaml Kingdom Wait Times" park="animal-kingdom"/>
+    },
   ]);
-
   return (
-    <div>   
-      <Header />
-      <main className="container">
-        <RouterProvider router={router} />
-      </main>  
+    <div>
+       
+        <Header />
+        <main className="container">
+          <RouterProvider router={router} />
+        </main>
+        <Footer />
     </div> 
   );
 }

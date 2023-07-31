@@ -14,10 +14,10 @@ export default function PostWraper() {
         useEffect(() => {
             setActiveNav();
         }, []);
-  const { id } = useParams();
+  const { slug } = useParams();
   return (
     <div>
-      <Post id={id} />
+      <Post slug={slug} />
     </div>
   );
 }

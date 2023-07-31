@@ -11,7 +11,8 @@ function Posts() {
       .get("https://oyster-app-sus4c.ondigitalocean.app/posts")
       .then((res) => {
         console.log(res);
-        setPosts(res.data.posts);
+        setPosts(res.data.posts.slice(0)
+        .reverse());
       })
       .catch((err) => {
         console.log(err);
@@ -38,7 +39,7 @@ function Posts() {
           <h1>Ad should be here</h1>
           <AdsComponent dataAdSlot={dataAdSlot} />
         </div>
-        <div className="row row-cols-2 row-cols-lg-12 align-items-stretch g-4 py-5">
+        <div className="row row-cols-2 row-cols-lg-12 align-items-stretch g-3 py-3">
           {posts.map((post) => {
             console.log(post);
             const imageUrl = post.image
@@ -48,7 +49,7 @@ function Posts() {
             const postStyle = {
               backgroundImage: `url("${imageUrl}")`,
             };
-            const postLink = "/post/" + post._id;
+            const postLink = "/post/" + post.slug;
             const pubDate = new Date(
               Date.parse(post.createdAt)
             ).toLocaleDateString("en-us", {

@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-export default function LandCard() {
+export default function ParkCard(props) {
   const [landInfo, setLandInfo] = useState([]);
 
   useEffect(() => {
+    const endpoint = "https://oyster-app-sus4c.ondigitalocean.app/"+ props.park + "-data";
     axios
-      .get("https://oyster-app-sus4c.ondigitalocean.app/magic-kingdom-data")
+      .get(endpoint)
       .then((res) => {
         console.log(res);
         setLandInfo(res.data.lands);
@@ -19,12 +20,11 @@ export default function LandCard() {
   return (
     <div className="grid gap-5">
     {landInfo.map((land) => {
-        const landImage = "./"+ land.name + ".jpg";
         return (    
       <div className="card p-3 mt-5">
-        <img src={landImage} className="card-img-top" alt={land.name} />
+        
         <div className="card-body">
-          <h2 className="card-title">{land.name}</h2>
+          <h1 className="card-title">{land.name}</h1>
         </div>
 
         {land.rides.map((ride) => {
