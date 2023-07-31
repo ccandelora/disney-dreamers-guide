@@ -60,6 +60,8 @@ function Post(props) {
     <div className="col-md-7">
       <article className="blog-post">
         <h1 className="mouse-text">{post.title}</h1>
+        <small className="text-muted">By {post.author}</small>
+        <small className="text-muted">Published on {post.pubDate}</small>
         <img
           src={imageUrl}
           className="img-fluid markdown-image"
