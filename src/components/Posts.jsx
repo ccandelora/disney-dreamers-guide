@@ -42,7 +42,7 @@ function Posts() {
         <div className="row row-cols-2 row-cols-lg-12 align-items-stretch g-3 py-3">
           {posts.map((post) => {
             console.log(post);
-            const imageUrl = post.image
+            const imageUrl = post.fileName
               ? "https://oyster-app-sus4c.ondigitalocean.app/uploads/" +
                 post.fileName
               : "none";
