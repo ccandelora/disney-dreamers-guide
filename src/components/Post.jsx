@@ -80,7 +80,7 @@ function Post(props) {
           <meta name="twitter:description" content={post.description} />
           {/* End Twitter tags */}
         </Helmet>
-        <div className="col-md-7">
+        <div className="col-m-9">
           <article className="blog-post">
             <h1 className="mouse-text">{post.title}</h1>
             <ul>
@@ -99,11 +99,11 @@ function Post(props) {
             <ReactMarkdown children={markdown} />
           </article>
         </div>
-        <div className="col-md-4"></div>
+        <div className="col-md-2"></div>
       </div>
       <div className="row">
         <div
-          class="fb-comments"
+          className="col fb-comments"
           data-href={postLink}
           data-width="900"
           data-numposts="20"
