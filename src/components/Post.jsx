@@ -4,6 +4,7 @@ import ReactMarkdown from "react-markdown";
 import ReactDom from "react-dom";
 import AdsComponent from "./AdsComponent";
 import { Helmet } from "react-helmet-async";
+import { FacebookProvider, Comments } from 'react-facebook';
 
 function Post(props) {
   const [post, setPost] = useState([]);
@@ -12,7 +13,7 @@ function Post(props) {
     "https://oyster-app-sus4c.ondigitalocean.app/uploads/" + post.fileName;
   const dataAdSlot = "4104724639";
   const postLink =
-    "https://oyster-app-sus4c.ondigitalocean.app/post/" + post.slug;
+    "https://www.disneydreamersguide.com/post/" + post.slug;
   const pubDate = new Date(Date.parse(post.createdAt)).toLocaleDateString(
     "en-us",
     {
@@ -90,12 +91,9 @@ function Post(props) {
         <div className="col-md-2"></div>
       </div>
       <div className="row">
-        <div
-          className="col fb-comments"
-          data-href={postLink}
-          data-width="100%"
-          data-numposts="20"
-        ></div>
+      <FacebookProvider appId="2058140294535510">
+        <Comments href={postLink} />
+      </FacebookProvider>
       </div>
     </div>
   );
