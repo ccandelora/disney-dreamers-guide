@@ -39,17 +39,6 @@ function Post(props) {
           "https://example.com/haunted-mansion-image.jpg",
           imageUrl
         );
-        const script = document.createElement("script");
-
-        script.src =
-          "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v17.0&appId=2058140294535510&autoLogAppEvents=1";
-
-        script.async = true;
-
-        script.crossOrigin = "anonymous";
-
-        document.body.appendChild(script);
-
         setMarkdown(markdown);
       })
       .catch((err) => {
