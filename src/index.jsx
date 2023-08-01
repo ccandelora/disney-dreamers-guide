@@ -7,11 +7,13 @@ import { HelmetProvider } from "react-helmet-async";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <HelmetProvider>
-    <React.StrictMode>
+  
+  <React.StrictMode>
+    <HelmetProvider >
       <App />
-    </React.StrictMode>
-  </HelmetProvider>
+    </HelmetProvider>
+  </React.StrictMode>
+  
 );
 
 // If you want to start measuring performance in your app, pass a function

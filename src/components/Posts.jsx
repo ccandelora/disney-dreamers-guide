@@ -11,8 +11,7 @@ function Posts() {
       .get("https://oyster-app-sus4c.ondigitalocean.app/posts")
       .then((res) => {
         console.log(res);
-        setPosts(res.data.posts.slice(0)
-        .reverse());
+        setPosts(res.data.posts.slice(0).reverse());
       })
       .catch((err) => {
         console.log(err);
@@ -32,61 +31,51 @@ function Posts() {
       return str;
     }
   };
-  return (
-    <div className="row ">
-      <div className="container">
-        <div className="adsbygoogle">
-          <h1>Ad should be here</h1>
-          <AdsComponent dataAdSlot={dataAdSlot} />
-        </div>
-        <div className="row row-cols-2 row-cols-lg-12 align-items-stretch g-3 py-3">
-          {posts.map((post) => {
-            console.log(post);
-            const imageUrl = post.fileName
-              ? "https://oyster-app-sus4c.ondigitalocean.app/uploads/" +
-                post.fileName
-              : "none";
-            const postStyle = {
-              backgroundImage: `url("${imageUrl}")`,
-            };
-            const postLink = "/post/" + post.slug;
-            const pubDate = new Date(
-              Date.parse(post.createdAt)
-            ).toLocaleDateString("en-us", {
-              day: "numeric",
-              month: "numeric",
-              year: "numeric",
-            });
-            const description = textTruncate(post.description, 50, "...");
-            console.log(pubDate);
 
-            return (
-              <div className="col">
-                <a href={postLink} className="text-decoration-none link-dark">
-                  <div
-                    className="card card-cover h-100  overflow-hidden text-bg-dark rounded-4 shadow-lg card-background"
-                    style={postStyle}
-                  >
-                    <div className="d-flex flex-column w-auto p-5 pb-3 text-white text-shadow-2">
-                      <h3 className="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">
-                        {post.title}
-                      </h3>
-                      <div className="white-background">
-                        <ul className="d-flex list-unstyled mt-auto">
-                          <li className="d-flex p-2">
-                            <small>{description}</small>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            );
-          })}
-          ;
-        </div>
-      </div>
+  return (
+    <div className="row">
+      {posts.map((post) => {
+        console.log(post);
+        const imageUrl = post.fileName
+          ? "https://oyster-app-sus4c.ondigitalocean.app/uploads/" +
+            post.fileName
+          : "none";
+        const postLink = "/post/" + post.slug;
+        const pubDate = new Date(Date.parse(post.createdAt)).toLocaleDateString(
+          "en-us",
+          {
+            day: "numeric",
+            month: "numeric",
+            year: "numeric",
+          }
+        );
+        const description = textTruncate(post.description, 160, "...");
+        console.log(pubDate);
+
+        return (
+          <div className="col col-6" style={{width:"350px"}}>
+            <div
+              className="card rounded-4 shadow-lg mb-3"
+            >
+              <a href={postLink} className="text-decoration-none link-dark">
+                <img
+                  src={imageUrl}
+                  className="card-img-top"
+                  alt={post.alt}
+                  style={{ height: "17em" }}
+                />
+                <div className="card-body" style={{height:"350px"}}>
+                  <h2 className="card-title">{post.title}</h2>
+                  <p className="card-text">{description}</p>
+                  <a href={postLink} className="btn btn-primary">
+                    Read More
+                  </a>
+                </div>
+              </a>
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 }
