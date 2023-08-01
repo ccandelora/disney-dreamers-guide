@@ -92,7 +92,7 @@ function Post(props) {
       </div>
       <div className="row">
       <FacebookProvider appId="2058140294535510">
-        <div style={{backGroundColor: "white", padding: "10px", margin: "10px"}}>
+        <div className="comment" style={{backgroundColor: "white", padding: "10px", margin: "10px"}}>
         <Comments href={postLink} />
         </div>
       </FacebookProvider>
