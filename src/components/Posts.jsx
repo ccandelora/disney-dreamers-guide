@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import AdsComponent from "./AdsComponent";
+import { Helmet } from "react-helmet-async";
 
 function Posts() {
   const [posts, setPosts] = useState([]);
   const dataAdSlot = "3261318770";
+  const link = "/";
 
   useEffect(() => {
     axios
@@ -34,6 +36,24 @@ function Posts() {
 
   return (
     <div className="row">
+      <Helmet>
+        {/* Standard metadata tags */}
+        <title>Disney Dreamer's Guide : Articles</title>
+        <meta name="description" content="Information and tips to help planr your next Disney World Vacation." />
+        {/* End standard metadata tags */}
+        {/* Facebook tags */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Disney Dreamer's Guide : Articles" />
+        <meta property="og:description" content="Information and tips to help planr your next Disney World Vacation." />
+        <meta property="og:url" content="http://localhost:3000" />
+        {/* End Facebook tags */}
+        {/* Twitter tags */}
+        <meta name="twitter:creator" content="Chris Candelora" />
+        <meta name="twitter:card" content="website" />
+        <meta name="twitter:title" content="Disney Dreamer's Guide : Articles" />
+        <meta name="twitter:description" content="Information and tips to help planr your next Disney World Vacation." />
+        {/* End Twitter tags */}
+      </Helmet>
       {posts.map((post) => {
         console.log(post);
         const imageUrl = post.fileName

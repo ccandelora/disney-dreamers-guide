@@ -11,6 +11,7 @@ function Post(props) {
   const imageUrl =
     "https://oyster-app-sus4c.ondigitalocean.app/uploads/" + post.fileName;
   const dataAdSlot = "4104724639";
+  const postLink = "https://oyster-app-sus4c.ondigitalocean.app/post/" + post.slug
   const pubDate = new Date(
     Date.parse(post.createdAt)
   ).toLocaleDateString("en-us", {
@@ -55,6 +56,8 @@ function Post(props) {
         <meta property="og:type" content="article" />
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.description} />
+        <meta property="og:image" content={imageUrl} />
+        <meta property="og:url" content={postLink} />
         {/* End Facebook tags */}
         {/* Twitter tags */}
         <meta name="twitter:creator" content={post.author} />
@@ -85,8 +88,7 @@ function Post(props) {
         </article>
       </div>
       <div className="col-md-4">
-        <h1>Ad should be here</h1>
-        <AdsComponent dataAdSlot={dataAdSlot} />
+        
       </div>
     </div>
   );

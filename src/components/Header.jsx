@@ -13,7 +13,7 @@ export default function Header() {
           </svg>
           <span className="fs-4 mouse-text text-white">
             <img
-              src="/disney-dreamer.png"
+              src="/disney-dreamers-guide-low-resolution-logo-white-on-transparent-background.png"
               alt="Disney Dreamer's Guide"
               height="75"
             />
