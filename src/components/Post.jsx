@@ -4,7 +4,7 @@ import ReactMarkdown from "react-markdown";
 import ReactDom from "react-dom";
 import AdsComponent from "./AdsComponent";
 import { Helmet } from "react-helmet-async";
-import { FacebookProvider, Comments } from "react-facebook";
+import { FacebookProvider, Comments, Share, Like} from "react-facebook";
 import FacebookLike from "./FacebookLike";
 import FacebookShare from "./FacebookShare";
 

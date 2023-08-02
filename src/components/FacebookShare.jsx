@@ -1,19 +1,15 @@
 import React from "react";
+import { FacebookProvider, ShareButton } from "react-facebook";
 
 export default function FacebookShare(props) {
-    let { link } = props;
-    const url = link + "&src=sdkpreparse";
-    const baseFacebookUrl = "https://www.facebook.com/sharer/sharer.php?u=";
-    const facebookUrl = baseFacebookUrl + encodeURI(url);
-    return (
-      <>
-        <div
-          className="fb-share-button"
-          data-href={link}
-          data-layout="button_count"
-          data-size="small"
-        >
-        </div>
-      </>
-    );
-  }
+  let { link } = props;
+  return (
+    <>
+      <FacebookProvider appId="2058140294535510">
+        <ShareButton href={link} className="my-classname">
+          Share
+        </ShareButton>
+      </FacebookProvider>
+    </>
+  );
+}

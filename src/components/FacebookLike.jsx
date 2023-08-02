@@ -1,18 +1,11 @@
 import React from "react";
+import { FacebookProvider, Like } from 'react-facebook';
 
 export default function FacebookLike(props) {
     let { link } = props;
-    return (
-      <>
-        <div
-          className="fb-like"
-          data-href={link}
-          data-width=""
-          data-layout="standard"
-          data-action="like"
-          data-size="small"
-          data-share="true"
-        ></div>
-      </>
-    );
-  }
+  return (
+    <FacebookProvider appId="2058140294535510">
+      <Like href={link} colorScheme="dark" showFaces share />
+    </FacebookProvider>
+  );
+}
