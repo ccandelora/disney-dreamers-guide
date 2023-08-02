@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet-async";
 export default function ParkCard(props) {
   console.log(props);
   const [landInfo, setLandInfo] = useState([]);
-  const landLink = "https://www.disneydreamersguide.com" + props.park + "queue-times";
+  const landLink = "https://www.disneydreamersguide.com/" + props.park + "-queue-times";
 
   useEffect(() => {
     const endpoint = "https://oyster-app-sus4c.ondigitalocean.app/"+ props.park + "-data";
