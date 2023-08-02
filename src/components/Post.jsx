@@ -4,7 +4,7 @@ import ReactMarkdown from "react-markdown";
 import ReactDom from "react-dom";
 import AdsComponent from "./AdsComponent";
 import { Helmet } from "react-helmet-async";
-import { FacebookProvider, Comments} from "react-facebook";
+import { FacebookProvider, Comments } from "react-facebook";
 import FacebookLikeShare from "./FacebookLike";
 
 function Post(props) {
@@ -72,7 +72,10 @@ function Post(props) {
         <div className="col-m-9">
           <article className="blog-post">
             <h1 className="mouse-text">{post.title}</h1>
-            <small className="text-muted">By {post.author}</small> | <small className="text-muted">Published on {pubDate}</small>
+            <p>
+              <small className="text-muted">By {post.author}</small> |{" "}
+              <small className="text-muted">Published on {pubDate}</small>
+            </p>
             <img
               src={imageUrl}
               className="img-fluid markdown-image"
