@@ -4,9 +4,8 @@ import ReactMarkdown from "react-markdown";
 import ReactDom from "react-dom";
 import AdsComponent from "./AdsComponent";
 import { Helmet } from "react-helmet-async";
-import { FacebookProvider, Comments, Share, Like} from "react-facebook";
-import FacebookLike from "./FacebookLike";
-import FacebookShare from "./FacebookShare";
+import { FacebookProvider, Comments} from "react-facebook";
+import FacebookLikeShare from "./FacebookLike";
 
 function Post(props) {
   const [post, setPost] = useState([]);
@@ -79,8 +78,7 @@ function Post(props) {
               className="img-fluid markdown-image"
               alt={post.alt}
             />
-            <FacebookLike link={postLink} />
-            <FacebookShare link={postLink} />
+            <FacebookLikeShare link={postLink} />
             <ReactMarkdown children={markdown} />
           </article>
           <FacebookProvider appId="2058140294535510">

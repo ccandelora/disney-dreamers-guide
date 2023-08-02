@@ -6,9 +6,7 @@ export default function FacebookShare(props) {
   return (
     <>
       <FacebookProvider appId="2058140294535510">
-        <ShareButton href={link} className="my-classname">
-          Share
-        </ShareButton>
+        <ShareButton href={link}/> 
       </FacebookProvider>
     </>
   );
