@@ -17,7 +17,7 @@ function WaitTimes(props) {
   return (
     <div>
         <Feature title={props.title} park={props.park}/>
-        <ParkCard park={props.park}/>
+        <ParkCard title={props.title} park={props.park}/>
     </div>
     
   )
