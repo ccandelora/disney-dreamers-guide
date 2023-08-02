@@ -87,15 +87,13 @@ function Post(props) {
             />
             <ReactMarkdown children={markdown} />
           </article>
+          <FacebookProvider appId="2058140294535510">
+            <div className="comment" style={{backgroundColor: "white", padding: "10px", margin: "10px"}}>
+              <Comments href={postLink} />
+            </div>
+          </FacebookProvider>
         </div>
         <div className="col-md-2"></div>
-      </div>
-      <div className="row">
-      <FacebookProvider appId="2058140294535510">
-        <div className="comment" style={{backgroundColor: "white", padding: "10px", margin: "10px"}}>
-        <Comments href={postLink} />
-        </div>
-      </FacebookProvider>
       </div>
     </div>
   );

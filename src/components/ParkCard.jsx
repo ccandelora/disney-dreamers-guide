@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Helmet } from "react-helmet";
 
 export default function ParkCard(props) {
   const [landInfo, setLandInfo] = useState([]);
+  const landLink = "https://www.disneydreamersguide.com" + props.park + "queue-times";
 
   useEffect(() => {
     const endpoint = "https://oyster-app-sus4c.ondigitalocean.app/"+ props.park + "-data";
@@ -19,6 +21,24 @@ export default function ParkCard(props) {
 
   return (
     <div className="grid gap-5">
+      <Helmet>
+          {/* Standard metadata tags */}
+          <title>{props.title}</title>
+          <meta name="description" content={props.title} />
+          {/* End standard metadata tags */}
+          {/* Facebook tags */}
+          <meta property="og:type" content="article" />
+          <meta property="og:title" content={props.title} />
+          <meta property="og:description" content={props.title} />
+          <meta property="og:url" content={landLink} />
+          {/* End Facebook tags */}
+          {/* Twitter tags */}
+          <meta name="twitter:creator" content="Chris Candelora" />
+          <meta name="twitter:card" content="article" />
+          <meta name="twitter:title" content={props.title} />
+          <meta name="twitter:description" content={props.title} />
+          {/* End Twitter tags */}
+        </Helmet>
     {landInfo.map((land) => {
         return (    
       <div className="card p-3 mt-5">
