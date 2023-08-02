@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import Posts from './Posts'
-import { Helmet } from "react-helmet-async";
 
 export default function HomeWraper() {
     const setActiveNav = function () {

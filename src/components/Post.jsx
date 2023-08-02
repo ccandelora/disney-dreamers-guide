@@ -4,7 +4,9 @@ import ReactMarkdown from "react-markdown";
 import ReactDom from "react-dom";
 import AdsComponent from "./AdsComponent";
 import { Helmet } from "react-helmet-async";
-import { FacebookProvider, Comments } from 'react-facebook';
+import { FacebookProvider, Comments } from "react-facebook";
+import FacebookLike from "./FacebookLike";
+import FacebookShare from "./FacebookShare";
 
 function Post(props) {
   const [post, setPost] = useState([]);
@@ -12,8 +14,7 @@ function Post(props) {
   const imageUrl =
     "https://oyster-app-sus4c.ondigitalocean.app/uploads/" + post.fileName;
   const dataAdSlot = "4104724639";
-  const postLink =
-    "https://www.disneydreamersguide.com/post/" + post.slug;
+  const postLink = "https://www.disneydreamersguide.com/post/" + post.slug;
   const pubDate = new Date(Date.parse(post.createdAt)).toLocaleDateString(
     "en-us",
     {
@@ -22,7 +23,7 @@ function Post(props) {
       year: "numeric",
     }
   );
-  
+
   useEffect(() => {
     const postApiEndPoint =
       "https://oyster-app-sus4c.ondigitalocean.app/post/" + props.slug;
@@ -72,23 +73,25 @@ function Post(props) {
         <div className="col-m-9">
           <article className="blog-post">
             <h1 className="mouse-text">{post.title}</h1>
-            <ul>
-              <li>
-                <small className="text-muted">By {post.author}</small>
-              </li>
-              <li>
-                <small className="text-muted">Published on {pubDate}</small>
-              </li>
-            </ul>
+            <small className="text-muted">By {post.author}</small> | <small className="text-muted">Published on {pubDate}</small>
             <img
               src={imageUrl}
               className="img-fluid markdown-image"
               alt={post.alt}
             />
+            <FacebookLike link={postLink} />
+            <FacebookShare link={postLink} />
             <ReactMarkdown children={markdown} />
           </article>
           <FacebookProvider appId="2058140294535510">
-            <div className="comment" style={{backgroundColor: "white", padding: "10px", margin: "10px"}}>
+            <div
+              className="comment"
+              style={{
+                backgroundColor: "white",
+                padding: "10px",
+                margin: "10px",
+              }}
+            >
               <Comments href={postLink} />
             </div>
           </FacebookProvider>
