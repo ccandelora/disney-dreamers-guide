@@ -1,171 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <url>
-
-    <loc>https://www.disneydreamersguide.com/</loc>
-
-    <lastmod>2023-08-03</lastmod>
-
-    <changefreq>monthly</changefreq>
-
-    <priority>0.8</priority>
-
-  </url>
-
-  <url>
-
-    <loc>https://www.disneydreamersguide.com/magic-kingdom-queue-times</loc>
-
-    <changefreq>daily</changefreq>
-
-  </url>
-
-  <url>
-
-    <loc>https://www.disneydreamersguide.com/animal-kingdom-queue-times</loc>
-
-    <changefreq>daily</changefreq>
-
-  </url>
-
-  <url>
-
-    <loc>https://www.disneydreamersguide.com/epcot-queue-times</loc>
-
-    <changefreq>daily</changefreq>
-
-  </url>
-
-  <url>
-
-    <loc>https://www.disneydreamersguide.com/hollywood-studios-queue-times</loc>
-
-    <changefreq>daily</changefreq>
-
-  </url>
-
-  <url>
-
-    <loc>https://www.disneydreamersguide.com/post/the-magic-of-disneys-cinderella-castle-a-symbol-of-dreams</loc>
-
-    <lastmod>2023-08-03</lastmod>
-
-    <changefreq>weekly</changefreq>
-
-  </url>
-
-  <url>
-
-    <loc>https://www.disneydreamersguide.com/post/best-times-to-visit-disney-world-navigating-crowd-levels-and-seasons</loc>
-
-    <lastmod>2023-08-03</lastmod>
-
-    <changefreq>weekly</changefreq>
-
-  </url>
-
-  <url>
-
-    <loc>https://www.disneydreamersguide.com/post/the-thrills-of-disneys-hollywood-studios-must-visit-attractions</loc>
-
-    <lastmod>2023-08-03</lastmod>
-
-    <changefreq>weekly</changefreq>
-
-  </url>
-
-  <url>
-
-    <loc>https://www.disneydreamersguide.com/post/disneys-animal-kingdom-a-wildlife-safari-in-the-heart-of-florida</loc>
-
-    <lastmod>2023-08-03</lastmod>
-
-    <changefreq>weekly</changefreq>
-
-  </url>
-  <url>
-
-    <loc>https://www.disneydreamersguide.com/post/fantasyland-fun-best-rides-for-young-kids-and-families</loc>
-
-    <lastmod>2023-08-03</lastmod>
-
-    <changefreq>weekly</changefreq>
-
-  </url>
-  <url>
-
-    <loc>https://www.disneydreamersguide.com/post/exploring-epcots-world-showcase-a-global-adventure</loc>
-
-    <lastmod>2023-08-03</lastmod>
-
-    <changefreq>weekly</changefreq>
-
-  </url>
-  <url>
-
-    <loc>https://www.disneydreamersguide.com/post/hidden-mickeys-the-hunt-for-disneys-secret-symbols</loc>
-
-    <lastmod>2023-08-03</lastmod>
-
-    <changefreq>weekly</changefreq>
-
-  </url>
-  <url>
-
-    <loc>https://www.disneydreamersguide.com/post/behind-the-scenes-how-disney-rides-and-shows-are-created</loc>
-
-    <lastmod>2023-08-03</lastmod>
-
-    <changefreq>weekly</changefreq>
-
-  </url>
-  <url>
-
-    <loc>https://www.disneydreamersguide.com/post/disney-dining-delights-best-restaurants-and-snacks-in-the-parks</loc>
-
-    <lastmod>2023-08-03</lastmod>
-
-    <changefreq>weekly</changefreq>
-
-  </url>
-  <url>
-
-    <loc>https://www.disneydreamersguide.com/post/the-evolution-of-disney-world-from-opening-day-to-today</loc>
-
-    <lastmod>2023-08-03</lastmod>
-
-    <changefreq>weekly</changefreq>
-
-  </url>
-  <url>
-
-    <loc>https://www.disneydreamersguide.com/post/magical-moments-heartwarming-guest-experiences-at-disney</loc>
-
-    <lastmod>2023-08-03</lastmod>
-
-    <changefreq>weekly</changefreq>
-
-  </url>
-  <url>
-
-    <loc>https://www.disneydreamersguide.comhttps://www.disneydreamersguide.com/post/a-day-in-the-life-of-a-disney-character-performer</loc>
-
-    <lastmod>2023-08-03</lastmod>
-
-    <changefreq>weekly</changefreq>
-
-  </url>
-  </url>
-  <url>
-
-    <loc>https://www.disneydreamersguide.com/post/top-10-must-do-attractions-at-disney-world</loc>
-
-    <lastmod>2023-08-03</lastmod>
-
-    <changefreq>weekly</changefreq>
-
-  </url>
-
+    <url>
+        <loc>https://www.disneydreamersguide.com/</loc>
+        <lastmod>2023-08-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.disneydreamersguide.com/magic-kingdom-queue-times</loc>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://www.disneydreamersguide.com/animal-kingdom-queue-times</loc>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://www.disneydreamersguide.com/epcot-queue-times</loc>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://www.disneydreamersguide.com/hollywood-studios-queue-times</loc>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://www.disneydreamersguide.com/post/the-magic-of-disneys-cinderella-castle-a-symbol-of-dreams</loc>
+        <lastmod>2023-08-03</lastmod>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.disneydreamersguide.com/post/best-times-to-visit-disney-world-navigating-crowd-levels-and-seasons</loc>
+        <lastmod>2023-08-03</lastmod>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.disneydreamersguide.com/post/the-thrills-of-disneys-hollywood-studios-must-visit-attractions</loc>
+        <lastmod>2023-08-03</lastmod>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.disneydreamersguide.com/post/disneys-animal-kingdom-a-wildlife-safari-in-the-heart-of-florida</loc>
+        <lastmod>2023-08-03</lastmod>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.disneydreamersguide.com/post/fantasyland-fun-best-rides-for-young-kids-and-families</loc>
+        <lastmod>2023-08-03</lastmod>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.disneydreamersguide.com/post/exploring-epcots-world-showcase-a-global-adventure</loc>
+        <lastmod>2023-08-03</lastmod>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.disneydreamersguide.com/post/hidden-mickeys-the-hunt-for-disneys-secret-symbols</loc>
+        <lastmod>2023-08-03</lastmod>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.disneydreamersguide.com/post/behind-the-scenes-how-disney-rides-and-shows-are-created</loc>
+        <lastmod>2023-08-03</lastmod>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.disneydreamersguide.com/post/disney-dining-delights-best-restaurants-and-snacks-in-the-parks</loc>
+        <lastmod>2023-08-03</lastmod>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.disneydreamersguide.com/post/the-evolution-of-disney-world-from-opening-day-to-today</loc>
+        <lastmod>2023-08-03</lastmod>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.disneydreamersguide.com/post/magical-moments-heartwarming-guest-experiences-at-disney</loc>
+        <lastmod>2023-08-03</lastmod>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.disneydreamersguide.comhttps://www.disneydreamersguide.com/post/a-day-in-the-life-of-a-disney-character-performer</loc>
+        <lastmod>2023-08-03</lastmod>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.disneydreamersguide.com/post/top-10-must-do-attractions-at-disney-world</loc>
+        <lastmod>2023-08-03</lastmod>
+        <changefreq>weekly</changefreq>
+    </url>
 </urlset>
+</xml>
