@@ -8,9 +8,6 @@ export default function Header() {
           href="/"
           className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none"
         >
-          <svg className="bi me-2" width="40" height="32">
-            <use xLinkHref="#bootstrap"></use>
-          </svg>
           <span className="fs-4 mouse-text text-white">
             <img
               src="/disney-dreamers-guide-low-resolution-logo-white-on-transparent-background.png"
@@ -22,14 +19,20 @@ export default function Header() {
 
         <ul className="nav nav-pills">
         <li className="nav-item home">
-            <a href="/" className="nav-link text-white articles">
+            <a href="/" className="nav-link text-white home">
               Home
+            </a>
+          </li>
+          
+          <li className="nav-item">
+            <a href="/" className="nav-link text-white articles">
+              Articles
             </a>
           </li>
           <li className="nav-item wait-times">
             <div className="dropdown">
               <button
-                className="btn btn-secondary dropdown-toggle"
+                className="btn btn-secondary dropdown-toggle nav-link wait-times text-white"
                 type="button"
                 id="dropdownMenuButton1"
                 data-bs-toggle="dropdown"
@@ -39,22 +42,22 @@ export default function Header() {
               </button>
               <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                 <li>
-                  <a className="dropdown-item" href="/magic-kingdom-queue-times">
+                  <a className="dropdown-item nav-link magickingdom" href="/magic-kingdom-queue-times">
                     Magic Kingdom Wait TImes
                   </a>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="epcot-queue-times">
+                  <a className="dropdown-item nav-link epcot" href="epcot-queue-times">
                     Epcot
                   </a>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="hollywood-studios-queue-times">
+                  <a className="dropdown-item nav-link hollywood" href="hollywood-studios-queue-times">
                     Hollywood Studios
                   </a>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="animal-kingdom-queue-times">
+                  <a className="dropdown-item nav-link animal" href="animal-kingdom-queue-times">
                     Animal Kingdom
                   </a>
                 </li>
@@ -62,11 +65,6 @@ export default function Header() {
             </div>
           </li>
 
-          <li className="nav-item">
-            <a href="/" className="nav-link text-white articles">
-              Articles
-            </a>
-          </li>
         </ul>
       </header>
     </div>
