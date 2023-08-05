@@ -53,7 +53,7 @@ export default function HomeCarousel(props) {
           <div className={carouselClass}> 
             <img src={imageUrl} className="opacity-75" width="100%" height="100%" alt={post.title} />
             <div className="container">
-              <div className="carousel-caption text-start text-black">
+              <div className="carousel-caption text-start">
                 <h1>{post.title}</h1>
                 <p className="">{description}</p>
                 <p><a className="btn btn-lg btn-primary" href={postLink}>Read More</a></p>
