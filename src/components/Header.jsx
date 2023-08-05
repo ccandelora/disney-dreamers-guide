@@ -25,7 +25,7 @@ export default function Header() {
           </li>
           
           <li className="nav-item">
-            <a href="/" className="nav-link text-white articles">
+            <a href="/articles" className="nav-link text-white articles">
               Articles
             </a>
           </li>
@@ -42,22 +42,22 @@ export default function Header() {
               </button>
               <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                 <li>
-                  <a className="dropdown-item nav-link magickingdom" href="/magic-kingdom-queue-times">
+                  <a className="dropdown-item magickingdom" href="/magic-kingdom-queue-times">
                     Magic Kingdom Wait TImes
                   </a>
                 </li>
                 <li>
-                  <a className="dropdown-item nav-link epcot" href="epcot-queue-times">
+                  <a className="dropdown-item epcot" href="epcot-queue-times">
                     Epcot
                   </a>
                 </li>
                 <li>
-                  <a className="dropdown-item nav-link hollywood" href="hollywood-studios-queue-times">
+                  <a className="dropdown-item hollywood" href="hollywood-studios-queue-times">
                     Hollywood Studios
                   </a>
                 </li>
                 <li>
-                  <a className="dropdown-item nav-link animal" href="animal-kingdom-queue-times">
+                  <a className="dropdown-item animal" href="animal-kingdom-queue-times">
                     Animal Kingdom
                   </a>
                 </li>
