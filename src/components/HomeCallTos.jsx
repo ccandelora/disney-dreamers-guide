@@ -30,7 +30,7 @@ function HomeCallTos() {
         <p className="lead">At Disney, innovation and tradition go hand in hand. Dive into the timeless classics that have charmed audiences for decades, and stay up to date with the latest and greatest additions to the Disney family. Whether you're a seasoned Disney enthusiast or a first-time visitor, our blog has something magical in store for everyone.</p>
       </div>
       <div className="col-md-5">
-      <img className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"  src="https://www.disneydreamersguide.com/pexels-ron-lach-10033222.jpg"  alt="Discover the Classics, Embrace the New" width="500" height="500" />
+      <img className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"  src="https://www.disneydreamersguide.com/christian-lambert-ffr8KZzfh10-unsplash.jpg"  alt="Discover the Classics, Embrace the New" width="500" height="500" />
 
       </div>
     </div>

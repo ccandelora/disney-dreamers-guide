@@ -45,7 +45,6 @@ function Posts() {
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Disney Dreamer's Guide : Articles" />
         <meta property="og:description" content="Information and tips to help planr your next Disney World Vacation." />
-        <meta property="og:url" content="http://localhost:3000" />
         {/* End Facebook tags */}
         {/* Twitter tags */}
         <meta name="twitter:creator" content="Chris Candelora" />
