@@ -69,7 +69,7 @@ function Post(props) {
           <meta name="twitter:description" content={post.description} />
           {/* End Twitter tags */}
         </Helmet>
-        <div className="col-m-9">
+        <div className="">
           <article className="blog-post">
             <h1 className="mouse-text">{post.title}</h1>
             <p>
@@ -97,7 +97,7 @@ function Post(props) {
             </div>
           </FacebookProvider>
         </div>
-        <div className="col-md-2"></div>
+        <div className=""></div>
       </div>
     </div>
   );

@@ -2,8 +2,8 @@ import React from 'react'
 
 function PrivacyPolicy() {
   return (
-<div className="container">
-    <h1>PrivacyPolicy</h1>
+<div className="container" style={{backgroundColor: "white"}}>
+    <h1>Privacy Policy</h1>
     <p>At DisneyDreamersGuide.com, the privacy of our visitors is of utmost importance to us. This Privacy Policy outlines the types of personal information that is received and collected by DisneyDreamersGuide.com and how it is used. We encourage you to read the following carefully to understand how we handle and protect your personal data.</p>
     <h2>Information We Collect</h2>
     <p>We may collect personal information that you provide directly to us, such as your name, email address, and any other information you choose to share when subscribing to our newsletter, leaving comments, or contacting us through our contact form.</p>
