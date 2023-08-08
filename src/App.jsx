@@ -8,6 +8,7 @@ import WaitTimes from './components/WaitTimes';
 import PostWraper from './components/PostWraper';
 import PostsWraper from './components/PostsWraper';
 import HomeWraper from './components/HomeWraper';
+import PrivacyPolicy from './components/PrivacyPolicy';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -34,6 +35,9 @@ function App() {
     },
     { path: "/animal-kingdom-queue-times",
       element: <WaitTimes title="Aniaml Kingdom Wait Times" park="animal-kingdom"/>
+    },
+    { path: "/privacy-policy",
+      element: <PrivacyPolicy />
     },
   ]);
 
