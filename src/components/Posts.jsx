@@ -72,7 +72,7 @@ function Posts() {
         console.log(pubDate);
 
         return (
-          <div className="col col-6" style={{width:"350px"}}>
+          <div className="col-md-6 col-lg-4 col-xl-3">
             <div
               className="card rounded-4 shadow-lg mb-3"
             >

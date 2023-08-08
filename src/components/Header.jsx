@@ -16,14 +16,12 @@ export default function Header() {
             />
           </span>
         </a>
-
         <ul className="nav nav-pills">
-        <li className="nav-item home">
+          <li className="nav-item home">
             <a href="/" className="nav-link text-white home">
               Home
             </a>
           </li>
-          
           <li className="nav-item">
             <a href="/articles" className="nav-link text-white articles">
               Articles
@@ -40,9 +38,15 @@ export default function Header() {
               >
                 Current Wait Times
               </button>
-              <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <ul
+                className="dropdown-menu"
+                aria-labelledby="dropdownMenuButton1"
+              >
                 <li>
-                  <a className="dropdown-item magickingdom" href="/magic-kingdom-queue-times">
+                  <a
+                    className="dropdown-item magickingdom"
+                    href="/magic-kingdom-queue-times"
+                  >
                     Magic Kingdom Wait TImes
                   </a>
                 </li>
@@ -52,19 +56,24 @@ export default function Header() {
                   </a>
                 </li>
                 <li>
-                  <a className="dropdown-item hollywood" href="hollywood-studios-queue-times">
+                  <a
+                    className="dropdown-item hollywood"
+                    href="hollywood-studios-queue-times"
+                  >
                     Hollywood Studios
                   </a>
                 </li>
                 <li>
-                  <a className="dropdown-item animal" href="animal-kingdom-queue-times">
+                  <a
+                    className="dropdown-item animal"
+                    href="animal-kingdom-queue-times"
+                  >
                     Animal Kingdom
                   </a>
                 </li>
               </ul>
             </div>
           </li>
-
         </ul>
       </header>
     </div>

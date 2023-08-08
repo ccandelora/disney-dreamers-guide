@@ -329,4 +329,28 @@ body {
   }
 }
 
+footer ul li a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+footer ul li a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+footer ul li a:hover {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+footer ul li a:active {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
   
