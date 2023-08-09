@@ -50,7 +50,7 @@ export default function ParkCard(props) {
 
         {land.rides.map((ride) => {
             return (
-            <ul className="list-group list-group-flush mt-4" style={{width:"550px"}}>
+            <ul className="list-group list-group-flush mt-4">
             <li className="list-group-item"><h2>{ride.name}</h2></li>
             <li className="list-group-item">Is Open: {ride.is_open ? <i className="bi bi-check-circle-fill text-success"></i> : <i className="bi bi-x-circle-fill text-danger"></i>}</li>
             <li className="list-group-item">Wait Time: {ride.wait_time} {ride.wait_time === 1 ? "Minute" : "Minutes"} </li>
