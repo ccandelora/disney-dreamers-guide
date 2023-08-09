@@ -21,7 +21,7 @@ export default function ParkCard(props) {
   }, []);
 
   return (
-    <div className="grid gap-5">
+    <div className="container">
       <Helmet>
           {/* Standard metadata tags */}
           <title>{props.title}</title>
@@ -44,7 +44,7 @@ export default function ParkCard(props) {
         return (    
       <div className="card p-3 mt-4">
         
-        <div className="card-body" style={{width:"550px"}}>
+        <div className="card-body">
           <h1 className="card-title">{land.name}</h1>
         </div>
 
