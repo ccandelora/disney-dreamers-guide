@@ -2,13 +2,11 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 export default function HomeCarousel(props) {
-  console.log(props);
   const [posts, setPosts] = useState([]);
   useEffect(() => {
     axios
       .get("https://oyster-app-sus4c.ondigitalocean.app/this-week")
       .then((res) => {
-        console.log(res);
         setPosts(res.data.posts);
       })
       .catch((err) => {
@@ -16,19 +14,6 @@ export default function HomeCarousel(props) {
       });
   }, []);
 
-  const textTruncate = function (str, length, ending) {
-    if (length == null) {
-      length = 200;
-    }
-    if (ending == null) {
-      ending = "...";
-    }
-    if (str.length > length) {
-      return str.substring(0, length - ending.length) + ending;
-    } else {
-      return str;
-    }
-  };
   return (
     <div id="myCarousel" className="carousel slide mb-6" data-bs-ride="carousel">
       <div className="carousel-indicators">
@@ -47,7 +32,6 @@ export default function HomeCarousel(props) {
               post.fileName
             : "none";
           const postLink = "/post/" + post.slug;
-          const description = textTruncate(post.description, 160, "...");
 
           return (
           <div className={carouselClass}> 
@@ -55,7 +39,6 @@ export default function HomeCarousel(props) {
             <div className="container">
               <div className="carousel-caption text-start text-black">
                 <h1>{post.title}</h1>
-                <p className="">{description}</p>
                 <p><a className="btn btn-lg btn-primary" href={postLink}>Read More</a></p>
               </div>
             </div>

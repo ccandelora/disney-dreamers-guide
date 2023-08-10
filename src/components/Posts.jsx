@@ -1,18 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import AdsComponent from "./AdsComponent";
 import { Helmet } from "react-helmet-async";
 
 function Posts() {
   const [posts, setPosts] = useState([]);
-  const dataAdSlot = "3261318770";
-  const link = "/";
 
   useEffect(() => {
     axios
       .get("https://oyster-app-sus4c.ondigitalocean.app/posts")
       .then((res) => {
-        console.log(res);
         setPosts(res.data.posts.slice(0).reverse());
       })
       .catch((err) => {
@@ -54,22 +50,12 @@ function Posts() {
         {/* End Twitter tags */}
       </Helmet>
       {posts.map((post) => {
-        console.log(post);
         const imageUrl = post.fileName
           ? "https://oyster-app-sus4c.ondigitalocean.app/uploads/" +
             post.fileName
           : "none";
         const postLink = "/post/" + post.slug;
-        const pubDate = new Date(Date.parse(post.createdAt)).toLocaleDateString(
-          "en-us",
-          {
-            day: "numeric",
-            month: "numeric",
-            year: "numeric",
-          }
-        );
         const description = textTruncate(post.description, 160, "...");
-        console.log(pubDate);
 
         return (
           <div className="col-md-6 col-lg-4 col-xl-3">

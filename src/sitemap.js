@@ -1,5 +1,5 @@
-import axios from "axios";
-
+/*import axios from "axios";*/
+/*
 const sitemap = require('sitemap');
     const url ="https://oyster-app-sus4c.ondigitalocean.app/posts";
     const postData = async (url, data) => {
@@ -23,3 +23,4 @@ const sitemap = require('sitemap');
       hostname,
       homeUrls,
     });
+    */

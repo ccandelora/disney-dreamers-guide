@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   createBrowserRouter,
-  Router,
   RouterProvider,
 } from "react-router-dom";
 import WaitTimes from './components/WaitTimes';
@@ -31,7 +30,7 @@ function App() {
       element: <WaitTimes title="Epcot Wait Times" park="epcot"/>
     },
     { path: "/hollywood-studios-queue-times",
-      element: <WaitTimes title="Hollywood Studios Wait Times"park="hollywood-studios"/>
+      element: <WaitTimes title="Hollywood Studios Wait Times" park="hollywood-studios"/>
     },
     { path: "/animal-kingdom-queue-times",
       element: <WaitTimes title="Aniaml Kingdom Wait Times" park="animal-kingdom"/>

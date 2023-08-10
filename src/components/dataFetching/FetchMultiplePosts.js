@@ -9,7 +9,6 @@ export default function FetchMultiplePosts() {
     useEffect(() => {
         axios.get("http://localhost:5000/getData")
             .then(res => {
-                console.log(res);
                 setLandInfo(res.data.lands);
             })
             .catch(err => {

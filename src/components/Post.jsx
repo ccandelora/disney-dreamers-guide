@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ReactMarkdown from "react-markdown";
-import ReactDom from "react-dom";
-import AdsComponent from "./AdsComponent";
 import { Helmet } from "react-helmet-async";
 import { FacebookProvider, Comments } from "react-facebook";
 import FacebookLikeShare from "./FacebookLike";
@@ -12,7 +10,6 @@ function Post(props) {
   const [markdown, setMarkdown] = useState("");
   const imageUrl =
     "https://oyster-app-sus4c.ondigitalocean.app/uploads/" + post.fileName;
-  const dataAdSlot = "4104724639";
   const postLink = "https://www.disneydreamersguide.com/post/" + post.slug;
   const pubDate = new Date(Date.parse(post.createdAt)).toLocaleDateString(
     "en-us",
@@ -45,7 +42,7 @@ function Post(props) {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [props?.slug]);
 
   return (
     <div className="container">
@@ -97,7 +94,6 @@ function Post(props) {
             </div>
           </FacebookProvider>
         </div>
-        <div className=""></div>
       </div>
     </div>
   );

@@ -3,7 +3,6 @@ import axios from "axios";
 import { Helmet } from "react-helmet-async";
 
 export default function ParkCard(props) {
-  console.log(props);
   const [landInfo, setLandInfo] = useState([]);
   const landLink = "https://www.disneydreamersguide.com/" + props.park + "-queue-times";
 
@@ -18,7 +17,7 @@ export default function ParkCard(props) {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [props?.park]);
 
   return (
     <div className="container">
