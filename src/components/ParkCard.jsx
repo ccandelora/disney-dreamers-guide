@@ -11,7 +11,6 @@ export default function ParkCard(props) {
     axios
       .get(endpoint)
       .then((res) => {
-        console.log(res);
         setLandInfo(res.data.lands);
       })
       .catch((err) => {

@@ -28,7 +28,7 @@ function Post(props) {
       .then((res) => {
         setPost(res.data.post);
         const imageUrl =
-          "https://oyster-app-sus4c.ondigitalocean.app/uploads/" +
+          "https://cdn.disneydreamersguide.com/uploads/" +
           res.data.post.fileName;
         const markdown = res.data.post.body.replace(
           "https://example.com/haunted-mansion-image.jpg",
