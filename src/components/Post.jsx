@@ -9,7 +9,7 @@ function Post(props) {
   const [post, setPost] = useState([]);
   const [markdown, setMarkdown] = useState("");
   const imageUrl =
-    "https://oyster-app-sus4c.ondigitalocean.app/uploads/" + post.fileName;
+    "https://cdn.disneydreamersguide.com/uploads/" + post.fileName;
   const postLink = "https://www.disneydreamersguide.com/post/" + post.slug;
   const pubDate = new Date(Date.parse(post.createdAt)).toLocaleDateString(
     "en-us",
@@ -23,12 +23,9 @@ function Post(props) {
   useEffect(() => {
     const postApiEndPoint =
       "https://oyster-app-sus4c.ondigitalocean.app/post/" + props.slug;
-    console.log(postApiEndPoint);
     axios
       .get(postApiEndPoint)
       .then((res) => {
-        console.log("res:");
-        console.log(res);
         setPost(res.data.post);
         const imageUrl =
           "https://oyster-app-sus4c.ondigitalocean.app/uploads/" +

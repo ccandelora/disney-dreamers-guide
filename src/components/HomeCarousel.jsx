@@ -24,11 +24,10 @@ export default function HomeCarousel(props) {
       </div>
       <div className="carousel-inner">
         {posts.map((post, idx) => {
-          console.log(post);
           const activeStatus = idx === 0 ? "active" : "";
           const carouselClass = "carousel-item " + activeStatus;
           const imageUrl = post.fileName
-            ? "https://oyster-app-sus4c.ondigitalocean.app/uploads/" +
+            ? "https://cdn.disneydreamersguide.com/uploads/" +
               post.fileName
             : "none";
           const postLink = "/post/" + post.slug;

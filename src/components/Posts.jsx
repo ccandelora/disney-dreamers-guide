@@ -51,7 +51,7 @@ function Posts() {
       </Helmet>
       {posts.map((post) => {
         const imageUrl = post.fileName
-          ? "https://oyster-app-sus4c.ondigitalocean.app/uploads/" +
+          ? "https://cdn.disneydreamersguide.com/uploads/" +
             post.fileName
           : "none";
         const postLink = "/post/" + post.slug;
