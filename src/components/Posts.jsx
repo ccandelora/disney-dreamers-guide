@@ -69,7 +69,7 @@ function Posts() {
                   alt={post.alt}
                   style={{ height: "17em" }}
                 />
-                <div className="card-body" style={{height:"350px"}}>
+                <div className="card-body" style={{height:"365px"}}>
                   <h2 className="card-title">{post.title}</h2>
                   <p className="card-text">{description}</p>
                   <a href={postLink} className="btn btn-primary">
